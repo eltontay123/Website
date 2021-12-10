@@ -65,8 +65,17 @@ $(function() {
 // game script 
 var character = document.getElementById("character"); 
 var block = document.getElementById('block');
+var startBtn = document.getElementById('startBtn');
+
+function run(){
+  startBtn.remove();
+  if (block.classList!="play") {
+    block.classList.add("play");
+  }
+}
+
 function jump(){
-  if (character.classList != "animate") {
+  if (character.classList != "animate" && block.classList=="play") {
   character.classList.add("animate");
   } 
   setTimeout(function(){

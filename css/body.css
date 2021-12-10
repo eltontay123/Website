@@ -58,6 +58,8 @@
     background-repeat: no repeat;
     background-size: contain;
     background-position: center center;
+    transform: translateX(20%);
+
 }
 #character{
     width: 35px;
@@ -88,9 +90,23 @@
     position: relative;
     top: 58px;
     left: 470px;
+}
+.play{
     animation: block 1s infinite linear;
 }
 @keyframes block{
     0%{left: 470px}
     100%{left: -15px}
+}
+#startBtn {
+    border: none;
+    background: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
 }
