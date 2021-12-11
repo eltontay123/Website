@@ -69,38 +69,39 @@ var startBtn = document.getElementById('startBtn');
 var endScreen = document.getElementById('endScreen')
 var endScreenContent = document.getElementById('endScreenContent')
 var disp = startBtn.style.display;
-var anim = block.style.animation;
 
+//to hide start button and allow block to move once you click play
 function run(){
   startBtn.style.display = "none" ;
   if (block.classList!="play") {
     block.classList.add("play");
   }
 }
-
+// to allow character to jump if clicked and in play
 function jump(){
   if (character.classList != "animate" && block.classList=="play") {
   character.classList.add("animate");
   } 
-  setTimeout(function(){
+  // only allow jump after jump has been completed
+  setTimeout(function(){ 
     character.classList.remove("animate");
   },500);
 }
+// on clicking replay, hide endscreen overlay
 function replay(){
-  endscreen.style.display = "none"
+  endScreen.style.display = "none"
+  block.style.display = "block";
+    character.style.display = "block"
 }
+// get coordinates of block from left and coordinates of character from top to check if they are colliding / lost game
 var checkDead = setInterval(function(){
-  var characterTop = 
-  parseInt(window.getComputedStyle(character).getPropertyValue("top"));
+  var characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
   var blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue('left'));
   if(blockLeft<27 && blockLeft>0 && characterTop>=58) {
+    // hide block and character, show end screen display
     block.style.display = "none";
+    character.style.display = "none"
     endScreen.style.display = 'block';
     endScreenContent.style.display = 'block';
-    //if(confirm('You lost... Restart?')){
-      //block.style.display = "block";
-    //} else{
-      //alert("Game Over!");
-    //}
   }
 },10);
