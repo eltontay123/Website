@@ -66,9 +66,13 @@ $(function() {
 var character = document.getElementById("character"); 
 var block = document.getElementById('block');
 var startBtn = document.getElementById('startBtn');
+var endScreen = document.getElementById('endScreen')
+var endScreenContent = document.getElementById('endScreenContent')
+var disp = startBtn.style.display;
+var anim = block.style.animation;
 
 function run(){
-  startBtn.remove();
+  startBtn.style.display = "none" ;
   if (block.classList!="play") {
     block.classList.add("play");
   }
@@ -82,19 +86,21 @@ function jump(){
     character.classList.remove("animate");
   },500);
 }
+function replay(){
+  endscreen.style.display = "none"
+}
 var checkDead = setInterval(function(){
   var characterTop = 
   parseInt(window.getComputedStyle(character).getPropertyValue("top"));
   var blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue('left'));
-  if(blockLeft<30 && blockLeft>0 && characterTop>=58) {
-    block.style.animation = "none";
+  if(blockLeft<27 && blockLeft>0 && characterTop>=58) {
     block.style.display = "none";
-    alert("you lost!");
-    if(confirm('Restart?')){
-      window.location.reload();
-    } else{
-      alert("Game Over!");
-    }
-    
+    endScreen.style.display = 'block';
+    endScreenContent.style.display = 'block';
+    //if(confirm('You lost... Restart?')){
+      //block.style.display = "block";
+    //} else{
+      //alert("Game Over!");
+    //}
   }
 },10);
