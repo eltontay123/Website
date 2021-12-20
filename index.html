@@ -67,17 +67,17 @@
                         <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div><img class="img-fluid" src="assets/img/portfolio/cake.png" alt="Resale Flat Price Visualization"/>
+                            </div><img class="img-fluid" src="assets/img/map.png" alt="Resale Flat Price Visualization"/>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 mb-5">
                         <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div><img class="img-fluid" src="assets/img/portfolio/circus.png" alt="Circus Tent"/>
+                            </div><img class="img-fluid" src="assets/img/portfolio/snake.png" alt="Snake Game"/>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-4 mb-5">
+                    <!--<div class="col-md-6 col-lg-4 mb-5">
                         <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal3">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
@@ -97,7 +97,7 @@
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div><img class="img-fluid" src="assets/img/portfolio/submarine.png" alt="Submarine"/>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </section>
@@ -112,8 +112,7 @@
                                 <div class="col-lg-8">
                                     <!-- Portfolio Modal - Title-->
                                     <h2 class="portfolio-modal-title text-secondary mb-0">Super 'Wack' Bros</h2>
-                                    <p></p>
-                                    <p></p>
+                                    <br>                         
                                     <!-- Portfolio Modal - Project Content-->
                                     <div id="game">
                                         <button type="button" id="startBtn" onclick="run()"><img src="https://1.bp.blogspot.com/-fVAKH-3TLuo/W5onDDHje0I/AAAAAAAAB4I/q2ooE6GuzQkS80dtw1JILXjFWdfQ3IKkwCLcBGAs/s1600/breaoutplay.png">
@@ -127,9 +126,8 @@
                                             </div>
                                     </div>
                                     <!-- Portfolio Modal - Text-->
-                                    <p></p>
-                                    <p class="mb-5">My first ever 2D game running on Javascript <br>Adapted from the old skool 90s hit</p>
-                                    <button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
+                                    <br>
+                                    <p class="mb-5">My first ever 2D game running on Javascript <br>Adapted from the old skool 90s hit <br>Click PLAY to begin</p>
                                 </div>
                             </div>
                         </div>
@@ -146,14 +144,13 @@
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
                                     <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary mb-0">Tasty Cake</h2>
-                                    <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="assets/img/portfolio/cake.png" alt="Tasty Cake"/>
-                                    <div>
-                                        <a href="assets/Resale_Flat_Prices_Visualization.html">Click here to view</a>
-                                    </div>
+                                    <h2 class="portfolio-modal-title text-secondary mb-0">Resale Flat Prices </h2>
+                                    <br>
+                                    <br>
+                                    <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="assets/img/map.png" alt="Visualization"/>
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit.Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                                    <button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
+                                    <p class="mb-5">Exploration of python libraries such as pandas, matplotlib, mplleaflet and seaborn for the analysis of location against HDB Resale Prices. Dataset used was 4RM HDB population data from data.gov</p>
+                                    <a class="btn btn-primary" href="assets/Resale_Flat_Prices_Visualization.html" target='child'>View Jupyter Notebook</a>
                                 </div>
                             </div>
                         </div>
@@ -170,11 +167,25 @@
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
                                     <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary mb-0">Circus Tent</h2>
-                                    <!-- Portfolio Modal - Image--><img class="img-fluid rounded mb-5" src="assets/img/portfolio/circus.png" alt="Circus Tent"/>
+                                    <h2 class="portfolio-modal-title text-secondary mb-0">Retro Snake Game</h2>
+                                    <!-- Portfolio Modal - Image-->
+                                    <div class='wrapper'>
+                                        <div id='header'>
+                                            <span id="score">0</span>
+                                            <div id="adder">+10</div>
+                                        </div>
+                                        <div id='endScreen2'>
+                                            <div id='endScreenContent2'>
+                                                <div>YOU<br>LOST!</div>
+                                                <button id="restart-button" onclick='restart()'><img src='assets/img/play_agn.png'></button>
+                                            </div>
+                                        </div>
+                                        <canvas id='snakeboard' width='400' height ='400'></canvas>
+                                    </div>
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit.Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                                    <button class="btn btn-primary" href="#" data-dismiss="modal"><i class="fas fa-times fa-fw"></i>Close Window</button>
+                                    <br>
+                                    <br>
+                                    <p class="mb-5">More dirty hands-on work with javascript, CSS and HTML <br> Retro snake game recreated with an added twist</p>
                                 </div>
                             </div>
                         </div>

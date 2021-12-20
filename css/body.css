@@ -45,7 +45,7 @@
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
         U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
-/* game project styles */
+/* game1 project styles */
 *{
     padding: 10;
     margin:  10;
@@ -58,7 +58,6 @@
     background-size: contain;
     background-position: center;
     transform: translateX(20%);
-
 }
 #character{
     width: 35px;
@@ -128,4 +127,59 @@
     margin: 80 auto;
     text-align: center;
     display:none;
+}
+/* game2 project styles */
+.wrapper {
+    position: relative;
+}
+#snakeboard {
+    padding-top: 1;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    left:0;
+    right:0;
+}
+#score {
+    text-align: center ;
+    font-size: 70px;
+    height: 100%;
+}
+#adder {
+    display: inline-block;
+    display: none;
+}
+#header {
+    text-align: center;
+}
+#endScreen2 {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left:0;
+    right:0;
+    z-index: 2;
+    width:400px;
+    height:400px;
+    background-color:rgba(0,0,0,0.8);
+    display: none;
+}
+#endScreenContent2 {
+    width: 200px;
+    height: 200px;
+    z-index: 2;
+    font-size: 35px;
+    padding-top: 10px;
+    font: 'Lucida Sans';
+    color: white;
+    background-color: teal;
+    transform: translateX(50.5%) translateY(43%);
+    margin: 80 auto;
+    text-align: center;
+}
+#restart-button {
+    margin-top: 2px;
+    background-color:rgba(0,128,128,0.5);
+    size: 20%;
+    z-index: 102;
 }
